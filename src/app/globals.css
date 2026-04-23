@@ -25,6 +25,43 @@
   color: var(--cs-text);
 }
 
+/* Attendance tab */
+.attendance-tab {
+  position: relative;
+}
+.attendance-tab--open {
+  /* inherits .nav-tab colors — looks identical to other tabs */
+}
+.attendance-tab--closed {
+  color: var(--cs-border);
+  opacity: 0.5;
+}
+.attendance-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cs-link);
+  margin-left: 5px;
+  vertical-align: middle;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+/* Dark mode toggle */
+.dark-mode-toggle {
+  color: var(--cs-muted);
+  background: transparent;
+}
+.dark-mode-toggle:hover {
+  color: var(--cs-text);
+  background: var(--cs-border);
+  transform: rotate(12deg) scale(1.1);
+}
+
 .dark {
   --cs-bg:          #0d0d14;
   --cs-surface:     #141420;
