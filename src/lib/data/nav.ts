@@ -75,5 +75,5 @@ export const utilityLinks = [
   { label: "Attendance", href: "#" },
   { label: "Extensions", href: "#" },
   { label: "Feedback", href: "#" },
-  { label: "Support Calendar", href: "#" },
+  { label: "Support", href: "#" },
 ];

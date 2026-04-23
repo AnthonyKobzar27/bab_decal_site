@@ -17,6 +17,31 @@
   --cs-break-bg:    #f5f6fa;   /* break row tint */
 }
 
+/* Nav tabs — hover handled via CSS so Navbar can stay a server component */
+.nav-tab {
+  color: var(--cs-muted);
+}
+.nav-tab:hover {
+  color: var(--cs-text);
+}
+
+.dark {
+  --cs-bg:          #0d0d14;
+  --cs-surface:     #141420;
+  --cs-border:      #2a2a3a;
+  --cs-text:        #e2e8f0;
+  --cs-muted:       #7a8499;
+  --cs-link:        #fbbf24;
+  --cs-link-hover:  #f59e0b;
+  --cs-accent:      #e2e8f0;
+  --cs-accent-pale: #1e1b0a;
+  --cs-nav-bg:      #09090f;
+  --cs-util-bg:     #0d0d18;
+  --cs-exam-bg:     #1e1700;
+  --cs-exam-text:   #fbbf24;
+  --cs-break-bg:    #0d0d14;
+}
+
 body {
   background: var(--cs-bg);
   color: var(--cs-text);
