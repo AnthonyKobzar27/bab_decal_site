@@ -9,10 +9,10 @@ export function ScheduleRowDiscussion({ item }: Props) {
 
   return (
     <div className="flex flex-col gap-0.5">
-      <span className="text-xs text-gray-400 dark:text-gray-500">
+      <span className="text-xs" style={{ color: "var(--cs-muted)" }}>
         Discussion {item.discussionNum}
       </span>
-      <span className="text-sm text-gray-800 dark:text-gray-200">{item.discussionTitle}</span>
+      <span className="text-sm" style={{ color: "var(--cs-text)" }}>{item.discussionTitle}</span>
       <div className="flex gap-2 mt-0.5">
         {item.discussionWorksheet && (
           <ExternalLink href={item.discussionWorksheet} className="text-xs">Worksheet</ExternalLink>

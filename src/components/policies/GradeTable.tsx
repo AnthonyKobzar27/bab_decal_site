@@ -1,29 +1,22 @@
 const weights = [
-  { item: "Homeworks (7)", weight: "10%" },
-  { item: "Project 1", weight: "10%" },
-  { item: "Project 2", weight: "20%" },
-  { item: "Project 3", weight: "10%" },
-  { item: "Midterm", weight: "20%" },
-  { item: "Final", weight: "30%" },
+  { item: "Attendance", weight: "20%" },
+  { item: "Assignments", weight: "40%" },
+  { item: "Course Project", weight: "40%" },
 ];
 
 const bins = [
-  { range: "[95, 100]", grade: "A+" },
-  { range: "[90, 95)", grade: "A" },
-  { range: "[85, 90)", grade: "A−" },
-  { range: "[80, 85)", grade: "B+" },
-  { range: "[75, 80)", grade: "B" },
-  { range: "[70, 75)", grade: "B−" },
-  { range: "[65, 70)", grade: "C+" },
-  { range: "[60, 65)", grade: "C" },
-  { range: "[55, 60)", grade: "C−" },
-  { range: "[50, 55)", grade: "D" },
-  { range: "[0, 50)", grade: "F" },
+  { range: "[90, 100]", grade: "A" },
+  { range: "[80, 90)", grade: "B" },
+  { range: "[70, 80)", grade: "C" },
+  { range: "[0, 70)", grade: "NP" },
 ];
 
 function TableHeader({ children }: { children: React.ReactNode }) {
   return (
-    <th className="py-2 px-4 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-900">
+    <th
+      className="py-2 px-4 text-left text-xs font-semibold uppercase tracking-wider"
+      style={{ color: "var(--cs-muted)", background: "var(--cs-bg)" }}
+    >
       {children}
     </th>
   );
@@ -31,7 +24,10 @@ function TableHeader({ children }: { children: React.ReactNode }) {
 
 function TableCell({ children }: { children: React.ReactNode }) {
   return (
-    <td className="py-2 px-4 text-sm text-gray-700 dark:text-gray-300 border-t border-gray-100 dark:border-gray-800">
+    <td
+      className="py-2 px-4 text-sm border-t"
+      style={{ color: "var(--cs-text)", borderColor: "var(--cs-border)" }}
+    >
       {children}
     </td>
   );
@@ -40,7 +36,7 @@ function TableCell({ children }: { children: React.ReactNode }) {
 export function GradeTable() {
   return (
     <div className="flex flex-col gap-6 sm:flex-row">
-      <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="rounded-lg overflow-hidden" style={{ border: "1px solid var(--cs-border)" }}>
         <table>
           <thead>
             <tr>
@@ -59,7 +55,7 @@ export function GradeTable() {
         </table>
       </div>
 
-      <div className="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+      <div className="rounded-lg overflow-hidden" style={{ border: "1px solid var(--cs-border)" }}>
         <table>
           <thead>
             <tr>

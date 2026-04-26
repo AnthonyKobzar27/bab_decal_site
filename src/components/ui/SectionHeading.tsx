@@ -16,7 +16,7 @@ const sizeMap = {
 
 export function SectionHeading({ children, as: Tag = "h2", className, id }: Props) {
   return (
-    <Tag id={id} className={cn("text-gray-900 dark:text-gray-100", sizeMap[Tag], className)}>
+    <Tag id={id} className={cn(sizeMap[Tag], className)} style={{ color: "var(--cs-text)" }}>
       {children}
     </Tag>
   );

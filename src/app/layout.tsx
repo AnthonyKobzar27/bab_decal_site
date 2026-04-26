@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     default: `${SITE_TITLE} · ${COURSE_SUBTITLE}`,
     template: `%s · ${SITE_TITLE}`,
   },
-  description: "Blockchain Dev Decal — Spring 2026, UC Berkeley",
+  description: "Blockchain Dev Decal — Fall 2026, UC Berkeley",
+  icons: { icon: "/bab.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

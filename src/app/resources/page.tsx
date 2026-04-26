@@ -5,16 +5,35 @@ import { ExternalLink } from "@/components/ui/ExternalLink";
 
 export const metadata: Metadata = { title: "Resources" };
 
-const pastExamSemesters = [
-  { sem: "Fall 2025", midterm: "#", final: "#", highlighted: true },
-  { sem: "Summer 2025", midterm: "#", final: "#", highlighted: true },
-  { sem: "Spring 2025", midterm: "#", final: "#", highlighted: true },
-  { sem: "Fall 2024", midterm: "#", final: "#", highlighted: true },
-  { sem: "Summer 2024", midterm: "#", final: "#", highlighted: true },
-  { sem: "Spring 2024", midterm: "#", final: "#", highlighted: false },
-  { sem: "Fall 2023", midterm: "#", final: "#", highlighted: false },
-  { sem: "Spring 2023", midterm: "#", final: "#", highlighted: false },
-  { sem: "Fall 2022", midterm: "#", final: "#", highlighted: false },
+const devResources = [
+  {
+    category: "Ethereum & Solidity",
+    links: [
+      { label: "Solidity Docs", href: "https://docs.soliditylang.org" },
+      { label: "Ethers.js Docs", href: "https://docs.ethers.org" },
+      { label: "Hardhat", href: "https://hardhat.org/docs" },
+      { label: "Foundry Book", href: "https://book.getfoundry.sh" },
+      { label: "OpenZeppelin Contracts", href: "https://docs.openzeppelin.com/contracts" },
+      { label: "Smart Contract Security Best Practices", href: "https://consensys.github.io/smart-contract-best-practices" },
+    ],
+  },
+  {
+    category: "Rust & CosmWasm",
+    links: [
+      { label: "The Rust Book", href: "https://doc.rust-lang.org/book" },
+      { label: "Rustlings Exercises", href: "https://github.com/rust-lang/rustlings" },
+      { label: "CosmWasm Docs", href: "https://docs.cosmwasm.com" },
+      { label: "Cosmos SDK Docs", href: "https://docs.cosmos.network" },
+    ],
+  },
+  {
+    category: "DeFi & Trading",
+    links: [
+      { label: "Uniswap v3 Whitepaper", href: "https://uniswap.org/whitepaper-v3.pdf" },
+      { label: "Wagmi (React Hooks for Ethereum)", href: "https://wagmi.sh" },
+      { label: "Ethereum Yellow Paper", href: "https://ethereum.github.io/yellowpaper/paper.pdf" },
+    ],
+  },
 ];
 
 const pastSites = {
@@ -22,11 +41,6 @@ const pastSites = {
     { label: "Spring 2025", href: "#" },
     { label: "Spring 2024", href: "#" },
     { label: "Spring 2023", href: "#" },
-  ],
-  summer: [
-    { label: "Summer 2025", href: "#" },
-    { label: "Summer 2024", href: "#" },
-    { label: "Summer 2023", href: "#" },
   ],
   fall: [
     { label: "Fall 2025", href: "#" },
@@ -40,49 +54,26 @@ export default function ResourcesPage() {
     <div className="max-w-4xl space-y-10">
       <SectionHeading as="h1">Resources</SectionHeading>
 
-      {/* Past Exams */}
-      <section className="space-y-4">
-        <SectionHeading as="h2">Past Exams</SectionHeading>
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          Staff recommends focusing on exams from{" "}
-          <strong className="text-gray-900 dark:text-gray-100">Summer 2024 and later</strong>{" "}
-          (highlighted below) as the most representative of this semester's exam style.
-        </p>
-
-        <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="bg-gray-50 dark:bg-gray-900 text-left text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-                <th className="py-3 px-4">Semester</th>
-                <th className="py-3 px-4">Midterm</th>
-                <th className="py-3 px-4">Final</th>
-              </tr>
-            </thead>
-            <tbody>
-              {pastExamSemesters.map((row) => (
-                <tr
-                  key={row.sem}
-                  className={
-                    row.highlighted
-                      ? "bg-blue-50 dark:bg-blue-950/20 font-medium border-t border-gray-100 dark:border-gray-800"
-                      : "border-t border-gray-100 dark:border-gray-800"
-                  }
-                >
-                  <td className="py-2.5 px-4 text-gray-800 dark:text-gray-200">{row.sem}</td>
-                  <td className="py-2.5 px-4">
-                    <ExternalLink href={row.midterm} className="text-xs">Exam</ExternalLink>
-                    {" · "}
-                    <ExternalLink href={row.midterm} className="text-xs">Solutions</ExternalLink>
-                  </td>
-                  <td className="py-2.5 px-4">
-                    <ExternalLink href={row.final} className="text-xs">Exam</ExternalLink>
-                    {" · "}
-                    <ExternalLink href={row.final} className="text-xs">Solutions</ExternalLink>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* Developer Resources */}
+      <section className="space-y-6">
+        <SectionHeading as="h2">Developer Resources</SectionHeading>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {devResources.map((group) => (
+            <div key={group.category} className="space-y-2">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                {group.category}
+              </h3>
+              <ul className="space-y-1">
+                {group.links.map((link) => (
+                  <li key={link.label}>
+                    <ExternalLink href={link.href} className="text-sm">
+                      {link.label}
+                    </ExternalLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -91,8 +82,8 @@ export default function ResourcesPage() {
       {/* Past Course Websites */}
       <section className="space-y-4">
         <SectionHeading as="h2">Past Course Websites</SectionHeading>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          {(["spring", "summer", "fall"] as const).map((season) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {(["spring", "fall"] as const).map((season) => (
             <div key={season} className="space-y-2">
               <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 capitalize">
                 {season}

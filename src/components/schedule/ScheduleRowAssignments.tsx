@@ -12,9 +12,20 @@ export function ScheduleRowAssignments({ item }: Props) {
     <div className="flex flex-col gap-1.5">
       {item.homework && (
         <div className="flex flex-col gap-0.5">
-          <Badge variant="amber">{item.homework}</Badge>
+          {item.homeworkLink ? (
+            <a
+              href={item.homeworkLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+            >
+              <Badge variant="amber">{item.homework}</Badge>
+            </a>
+          ) : (
+            <Badge variant="amber">{item.homework}</Badge>
+          )}
           {item.homeworkDue && (
-            <span className="text-xs text-gray-500 dark:text-gray-400">Due {item.homeworkDue}</span>
+            <span className="text-xs" style={{ color: "var(--cs-muted)" }}>Due {item.homeworkDue}</span>
           )}
         </div>
       )}
@@ -22,7 +33,7 @@ export function ScheduleRowAssignments({ item }: Props) {
         <div className="flex flex-col gap-0.5">
           <Badge variant="blue">{item.project}</Badge>
           {item.projectDue && (
-            <span className="text-xs text-gray-500 dark:text-gray-400">Due {item.projectDue}</span>
+            <span className="text-xs" style={{ color: "var(--cs-muted)" }}>Due {item.projectDue}</span>
           )}
         </div>
       )}

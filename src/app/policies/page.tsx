@@ -13,14 +13,13 @@ export default function PoliciesPage() {
 
       <PolicySection id="enrollment" title="Enrollment">
         <p>
-          In general, course staff does not control enrollment; we follow department enrollment
-          policies. Non-CS majors cannot receive enrollment codes. Students planning to enroll
-          later should email{" "}
-          <a href="mailto:cs161@berkeley.edu" className="text-blue-600 dark:text-blue-400 underline">
-            cs161@berkeley.edu
+          The Blockchain Dev Decal is open to all UC Berkeley students regardless of major. No prior
+          blockchain experience is required — curiosity and a willingness to learn are the only
+          prerequisites. To join the waitlist or ask enrollment questions, email{" "}
+          <a href="mailto:blockchaindecal@berkeley.edu">
+            blockchaindecal@berkeley.edu
           </a>
-          . Concurrent enrollment students with pending applications will be added automatically
-          within 3–4 days.
+          .
         </p>
       </PolicySection>
 
@@ -28,21 +27,14 @@ export default function PoliciesPage() {
 
       <PolicySection id="prerequisites" title="Prerequisites">
         <p>
-          The course requires CS61B, CS70, and CS61C, though prerequisites are not formally
-          enforced. Basic C, Python, and Git knowledge are assumed. Project 2 uses Go without
-          dedicated syntax instruction.
+          The course assumes basic programming experience — at the level of CS61A or equivalent.
+          You should be comfortable reading and writing Python or JavaScript. No prior knowledge of
+          cryptography, distributed systems, or Solidity is expected; we teach everything from
+          scratch.
         </p>
         <p className="mt-2">
-          <strong>CS61C:</strong> Understanding C, assembly, number system conversions, complex C
-          programs, GDB debugging, and assembly code reading is essential.
-        </p>
-        <p className="mt-2">
-          <strong>CS61B:</strong> If you can implement a linked list from scratch, test your own
-          code, and work in a 500–1000 line codebase, you have met this requirement.
-        </p>
-        <p className="mt-2">
-          <strong>CS70:</strong> Understanding modular arithmetic, set notation, and mathematical
-          proofs is needed.
+          Familiarity with the command line and Git is helpful but not required. We will cover the
+          necessary tooling in the first two weeks.
         </p>
       </PolicySection>
 
@@ -50,81 +42,42 @@ export default function PoliciesPage() {
 
       <PolicySection id="lecture" title="Lecture">
         <p>
-          Lectures occur Mondays, Wednesdays, and Fridays from 3:00–4:00 PM PT, with attempted
-          Zoom livestreaming. Attendance earns 0.1% extra credit per lecture (maximum 2% for 20
-          lectures), starting Week 3.
+          Lectures are held Thursdays 2:00–3:00 PM PT. Attendance is taken each week via the
+          Attendance tab in the course header. Lecture recordings are posted to the{" "}
+          <a href="https://www.youtube.com/@BlockchainatBerkeley" target="_blank" rel="noopener noreferrer">
+            Blockchain at Berkeley YouTube channel
+          </a>{" "}
+          within 48 hours.
         </p>
-        <p className="mt-2 text-red-700 dark:text-red-400 font-medium">
-          Do not claim attendance credit if you are not actually in the lecture hall. Falsely
-          claiming attendance results in a −2% grade penalty and an academic misconduct case.
+        <p className="mt-2 font-medium" style={{ color: "var(--cs-exam-text)" }}>
+          Do not submit attendance if you did not attend. Fraudulent attendance submissions result
+          in a deduction and may be escalated to the Center for Student Conduct.
         </p>
       </PolicySection>
 
       <Divider />
 
-      <PolicySection id="discussions" title="Discussion Sections">
+      <PolicySection id="assignments" title="Assignments">
         <p>
-          Regular sections focus on current material (1 hour). Bridge sections offer gentler pacing
-          covering the previous week's content. Exam prep sections use past exam problems.
-          Discussions are optional but recommended — attendance is not taken.
-        </p>
-      </PolicySection>
-
-      <Divider />
-
-      <PolicySection id="office-hours" title="Office Hours">
-        <p>
-          TAs and instructors hold office hours throughout the semester using an online queue to
-          process help tickets. Instructor hours address higher-level content questions; homework
-          and project help requires TA office hours.
-        </p>
-      </PolicySection>
-
-      <Divider />
-
-      <PolicySection id="exams" title="Exams">
-        <ul className="list-disc pl-5 space-y-1">
-          <li>
-            <strong>Midterm:</strong> Thursday, March 12, 7–9 PM PT
-          </li>
-          <li>
-            <strong>Midterm alternate:</strong> Friday, March 13, 8–10 AM PT (in-person only)
-          </li>
-          <li>
-            <strong>Final:</strong> Wednesday, May 13, 7–10 PM PT
-          </li>
-          <li>
-            <strong>Final alternate:</strong> Wednesday, May 13, 4–7 PM PT (in-person only)
-          </li>
-        </ul>
-        <p className="mt-3">
-          Remote exam options are available only at scheduled times with video proctoring
-          approval. Alternates are only available for genuine scheduling conflicts, not for
-          exam-spacing preference.
-        </p>
-      </PolicySection>
-
-      <Divider />
-
-      <PolicySection id="homeworks" title="Homeworks">
-        <p>
-          Seven homeworks are released weekly, due Fridays at 11:59 PM PT via Gradescope.
-          Homeworks cannot be turned in late unless you have approved extensions or
-          accommodations. Auditors may join using the code <code className="font-mono bg-gray-100 dark:bg-gray-800 px-1 py-0.5 rounded text-xs">G2DR3D</code>.
-        </p>
-      </PolicySection>
-
-      <Divider />
-
-      <PolicySection id="projects" title="Projects">
-        <p>
-          Three projects, available individually or in pairs. Projects cannot be turned in late
-          without approved extensions or accommodations. Projects 1 and 3 allow unlimited
-          submissions and most students receive full scores on coding portions.
+          Weekly assignments reinforce the lecture material and typically take 1–3 hours to
+          complete. Assignments are submitted via Gradescope and are due the following Wednesday at
+          11:59 PM PT. Late submissions are not accepted unless you have an approved extension.
         </p>
         <p className="mt-2">
-          Project 2 includes hidden autograder tests run after final submission. The average
-          coding score on Project 2 is approximately 60%, distributed similarly to an exam.
+          Assignments may include written reflections, short coding exercises in Solidity or
+          JavaScript, and conceptual questions about protocol design.
+        </p>
+      </PolicySection>
+
+      <Divider />
+
+      <PolicySection id="project" title="Course Project">
+        <p>
+          The course project is the centerpiece of the Decal. Teams of 2–4 students design and
+          build a decentralized application over the second half of the semester, culminating in a
+          live demo at the end-of-semester showcase. See the{" "}
+          <a href="/course-project">Course Project</a> page for full details, milestones, and
+          grading rubric.
         </p>
       </PolicySection>
 
@@ -132,10 +85,10 @@ export default function PoliciesPage() {
 
       <PolicySection id="grading" title="Grading">
         <GradeTable />
-        <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-          Grade bins are guaranteed only for students completing all three projects (minimum 50%
-          per project). Grades are at course staff's discretion for anyone who fails to complete
-          any project without explicit approval. Treat these bins as a minimum potential grade.
+        <p className="mt-4 text-xs" style={{ color: "var(--cs-muted)" }}>
+          The Blockchain Dev Decal is a P/NP course. The grade bins above correspond to the
+          minimum score required for a passing grade (70%). Students who do not submit a course
+          project will not receive a passing grade regardless of other scores.
         </p>
       </PolicySection>
 
@@ -143,54 +96,45 @@ export default function PoliciesPage() {
 
       <PolicySection id="collaboration" title="Collaboration Policy">
         <p>
-          Write all solutions strictly by yourself (with your partner on projects). Discussing
-          course topics is encouraged; sharing code or solutions is not.
-        </p>
-        <p className="mt-2 font-semibold text-red-700 dark:text-red-400">
-          DO NOT give anyone your code. DO NOT post project solutions online.
+          Discussion of course concepts and general problem-solving approaches is encouraged. Sharing
+          exact solutions to assignments is not permitted.
         </p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
-          <li>Do not ask for homework or project solutions on Stack Overflow or similar sites.</li>
-          <li>Do not receive help from students who took the course in previous years.</li>
-          <li>Partners must work synchronously in a pair-programming style.</li>
-          <li>Use GitHub private repositories to keep your solutions private.</li>
+          <li>Write all assignment solutions yourself (with your project partner on project work).</li>
+          <li>Do not copy code from other students or post solutions publicly.</li>
+          <li>Cite any external resources (Stack Overflow, documentation, etc.) you use.</li>
+          <li>Use private GitHub repositories to keep your project code off public forums.</li>
         </ul>
-        <p className="mt-3">
-          Violations result in referral to the Center for Student Conduct, negative points on the
-          entire assignment, and possible course failure.
-        </p>
       </PolicySection>
 
       <Divider />
 
       <PolicySection id="ai-policy" title="Generative AI Policy">
         <p>
-          CS 161 staff believe the best learning happens in the absence of generative AI tools.
+          AI tools are a real part of modern blockchain development, and we don't pretend otherwise.
+          However, using AI to complete assignments defeats the purpose of the course.
         </p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
           <li>
-            <strong>As a Student:</strong> You may ask AI to reword material or generate practice
-            problems. You cannot use AI to complete homework or projects.
+            <strong>Assignments:</strong> Do not use AI to generate your answers. You may use AI to
+            clarify concepts, but the written response must be your own.
           </li>
           <li>
-            <strong>As a Systems Designer:</strong> You may ask AI to reword specifications. You
-            cannot ask AI to design components or write design documents.
-          </li>
-          <li>
-            <strong>As an Engineer (Project 2):</strong> You may ask AI to explain Go syntax and
-            write small boilerplate (with citation). You cannot use uncited generated code or have
-            AI implement substantial portions.
+            <strong>Project:</strong> You may use AI to generate boilerplate and explore syntax, but
+            core contract logic and architecture must come from your team. Cite AI-generated
+            snippets in comments.
           </li>
         </ul>
       </PolicySection>
 
       <Divider />
 
-      <PolicySection id="ethics" title="Ethics">
+      <PolicySection id="conduct" title="Code of Conduct">
         <p>
-          We discuss attacks in this class, some of them quite nasty. This is not an invitation to
-          undertake these attacks in any fashion other than with the informed consent of all
-          involved and affected parties.
+          We are committed to a welcoming environment for students of all backgrounds. Harassment,
+          discrimination, or exclusionary behavior of any kind is not tolerated. Please report
+          concerns to any instructor or to{" "}
+          <a href="mailto:blockchaindecal@berkeley.edu">blockchaindecal@berkeley.edu</a>.
         </p>
       </PolicySection>
     </div>

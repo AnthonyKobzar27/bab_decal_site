@@ -34,16 +34,16 @@ export function ScheduleRow({ item, isFirstOfWeek, weekRowSpan }: Props) {
             "py-2 px-3 text-center text-sm font-semibold align-middle w-12",
             "border-r border-[var(--cs-border)]"
           )}
-          style={{ color: "var(--cs-muted)" }}
+          style={{ color: "var(--cs-text)" }}
         >
           {item.week}
         </td>
       )}
 
       {/* Date */}
-      <td className="py-2 px-3 w-[7.5rem] whitespace-nowrap text-sm" style={{ color: "var(--cs-muted)" }}>
-        <div className="font-medium" style={{ color: "var(--cs-text)" }}>{item.date}</div>
-        <div className="text-xs">{item.day}</div>
+      <td className="py-2 px-3 w-[7.5rem] whitespace-nowrap text-sm" style={{ color: "var(--cs-text)" }}>
+        <div className="font-medium">{item.date}</div>
+        <div className="text-xs" style={{ color: "var(--cs-muted)" }}>{item.day}</div>
       </td>
 
       {/* Lecture */}

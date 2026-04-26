@@ -22,7 +22,7 @@ export function CourseHeader() {
           </div>
 
           {/* Detail row */}
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm" style={{ color: "var(--cs-muted)" }}>
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm" style={{ color: "var(--cs-text)" }}>
             <span className="flex items-center gap-1.5">
               <Clock className="h-4 w-4 opacity-60 shrink-0" aria-hidden="true" />
               {LECTURE_TIME}
@@ -35,8 +35,7 @@ export function CourseHeader() {
 
             <span className="flex items-center gap-2">
               <Video className="h-4 w-4 opacity-60 shrink-0" aria-hidden="true" />
-              <ExternalLink href="#">Zoom</ExternalLink>
-              <ExternalLink href="#">YouTube</ExternalLink>
+              <ExternalLink href="https://www.youtube.com/@BlockchainatBerkeley">YouTube</ExternalLink>
             </span>
 
             <span className="flex items-center gap-1.5">

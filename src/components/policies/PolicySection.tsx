@@ -19,7 +19,7 @@ export function PolicySection({ id, title, children, className }: Props) {
       <SectionHeading as="h2" id={`${id}-heading`}>
         {title}
       </SectionHeading>
-      <div className="prose prose-gray dark:prose-invert max-w-none text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+      <div className="prose max-w-none text-sm leading-relaxed" style={{ color: "var(--cs-text)" }}>
         {children}
       </div>
     </section>

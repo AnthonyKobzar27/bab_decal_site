@@ -24,8 +24,7 @@ export function CourseInfoBanner() {
 
         <div className="flex items-center gap-3">
           <Video className="h-4 w-4 opacity-50" aria-hidden="true" />
-          <ExternalLink href="#" className="text-sm">Zoom</ExternalLink>
-          <ExternalLink href="#" className="text-sm">YouTube Playlist</ExternalLink>
+          <ExternalLink href="https://www.youtube.com/@BlockchainatBerkeley" className="text-sm">YouTube</ExternalLink>
         </div>
       </div>
     </div>
