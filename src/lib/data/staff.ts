@@ -28,7 +28,7 @@ export const staff: StaffMember[] = [
     roleLabel: "Instructor",
   },
   {
-    name: "Nithya Appanagari",
+    name: "Nithya Appannagaari",
     email: "blockchaindecal@berkeley.edu",
     role: "instructor",
     roleLabel: "Instructor",
