@@ -1,6 +1,6 @@
 export const SITE_TITLE = "Blockchain Dev Decal";
 export const COURSE_SUBTITLE = "Fall 2026 · UC Berkeley";
-export const INSTRUCTORS = ["Elson Liu", "Yadukrishna Ragu", "Anthony Kobzar", "Nithya Appanagari"];
+export const INSTRUCTORS = ["Elson Liu", "Yadukrishna Ragu", "Anthony Kobzar", "Nithya Appannagaari"];
 export const LECTURE_TIME = "Mondays · Time TBD";
 export const LECTURE_ROOM = "TBD";
 export const COURSE_EMAIL = "blockchaindecal@berkeley.edu";
