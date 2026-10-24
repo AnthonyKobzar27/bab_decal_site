@@ -27,7 +27,8 @@ export function ScheduleTable() {
           {weeks.map((weekItems) =>
             weekItems.map((item, indexWithinWeek) => (
               <ScheduleRow
-                key={`${item.week}-${item.date}`}
+                // Key on position, not `date`: several rows can share DATE_TBD.
+                key={`${item.week}-${indexWithinWeek}`}
                 item={item}
                 isFirstOfWeek={indexWithinWeek === 0}
                 weekRowSpan={weekItems.length}
