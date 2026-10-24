@@ -30,6 +30,8 @@ export function AttendanceTab() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    // Intentional: time-dependent state is synced after hydration to avoid a server/client mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOpen(isClassOpen());
     const id = setInterval(() => setOpen(isClassOpen()), 30_000);
     return () => clearInterval(id);

@@ -111,7 +111,7 @@ export default function PoliciesPage() {
 
       <PolicySection id="ai-policy" title="Generative AI Policy">
         <p>
-          AI tools are a real part of modern blockchain development, and we don't pretend otherwise.
+          AI tools are a real part of modern blockchain development, and we don&apos;t pretend otherwise.
           However, using AI to complete assignments defeats the purpose of the course.
         </p>
         <ul className="mt-2 list-disc pl-5 space-y-1">
