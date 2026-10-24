@@ -8,6 +8,8 @@ export function DarkModeToggle() {
     const saved = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const isDark = saved === "dark" || (!saved && prefersDark);
+    // Intentional: browser-only state is synced after hydration to avoid a server/client mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setDark(isDark);
     document.documentElement.classList.toggle("dark", isDark);
   }, []);

@@ -30,7 +30,7 @@ export default function CourseProjectPage() {
           <li>
             <strong>Phase 1 — Proposal (Week 4):</strong> Submit a one-page project proposal
             describing your idea, the problem it solves, a high-level architecture diagram, and your
-            team's breakdown of responsibilities. Proposals are reviewed by course staff for scope
+            team&apos;s breakdown of responsibilities. Proposals are reviewed by course staff for scope
             and feasibility.
           </li>
           <li>
@@ -75,7 +75,7 @@ export default function CourseProjectPage() {
       <PolicySection id="ideas" title="Project Ideas">
         <p>
           You are encouraged to come up with your own idea. Below are a few starting points if
-          you're looking for inspiration:
+          you&apos;re looking for inspiration:
         </p>
         <ul className="list-disc pl-5 mt-2 space-y-1">
           <li>A decentralized voting system with on-chain tallying and anonymized ballots.</li>

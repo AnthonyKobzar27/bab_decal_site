@@ -10,12 +10,6 @@ export type StaffMember = {
 
 export const staff: StaffMember[] = [
   {
-    name: "Elson Liu",
-    email: "blockchaindecal@berkeley.edu",
-    role: "instructor",
-    roleLabel: "Instructor",
-  },
-  {
     name: "Yadukrishna Ragu",
     email: "blockchaindecal@berkeley.edu",
     role: "instructor",
