@@ -40,10 +40,11 @@ export default function Project1Page() {
 
       <Divider />
 
-      <PolicySection id="ai-policy" title="No AI">
+      <PolicySection id="ai-policy" title="AI Policy">
         <p className="font-medium" style={{ color: "var(--cs-exam-text)" }}>
-          No AI for this project. Everything you submit must be written by your team.
+          No AI for your Solidity. Every line of your smart contract must be written by your team.
         </p>
+        <p>For everything else, including the frontend and writeup, AI is allowed and encouraged.</p>
       </PolicySection>
     </div>
   );
