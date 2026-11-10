@@ -1,14 +1,22 @@
 import { schedule } from "@/lib/data/schedule";
 import { ScheduleRow } from "./ScheduleRow";
+import { ScheduleList } from "./ScheduleList";
 import { groupScheduleByWeek } from "@/lib/utils/scheduleUtils";
 
-/** Full course calendar table. */
+/**
+ * Full course calendar. Below the md breakpoint it renders ScheduleList (one
+ * stacked entry per row); from md up it renders the five-column table.
+ */
 export function ScheduleTable() {
   const weeks = groupScheduleByWeek(schedule);
 
   /* border-radius: 4px matches Just the Docs table style */
   return (
-    <div className="overflow-x-auto border border-[var(--cs-border)]" style={{ borderRadius: 4 }}>
+    <>
+    <div className="md:hidden">
+      <ScheduleList weeks={weeks} />
+    </div>
+    <div className="hidden md:block overflow-x-auto border border-[var(--cs-border)]" style={{ borderRadius: 4 }}>
       <table className="w-full text-sm">
         <thead>
           <tr
@@ -38,5 +46,6 @@ export function ScheduleTable() {
         </tbody>
       </table>
     </div>
+    </>
   );
 }

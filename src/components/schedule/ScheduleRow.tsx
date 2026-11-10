@@ -3,6 +3,7 @@ import { type ScheduleItem } from "@/lib/data/schedule";
 import { ScheduleRowLecture } from "./ScheduleRowLecture";
 import { ScheduleRowDiscussion } from "./ScheduleRowDiscussion";
 import { ScheduleRowAssignments } from "./ScheduleRowAssignments";
+import { getScheduleRowStyle } from "@/lib/utils/scheduleUtils";
 
 type Props = {
   item: ScheduleItem;
@@ -12,19 +13,10 @@ type Props = {
 
 /** A single row in the course schedule table. */
 export function ScheduleRow({ item, isFirstOfWeek, weekRowSpan }: Props) {
-  const isExamRow = item.isExam;
-  const isBreakRow = item.isBreak;
-
-  const rowStyle = isExamRow
-    ? { background: "var(--cs-exam-bg)" }
-    : isBreakRow
-    ? { background: "var(--cs-break-bg)" }
-    : undefined;
-
   return (
     <tr
       className="border-b border-[var(--cs-border)] align-top"
-      style={rowStyle}
+      style={getScheduleRowStyle(item)}
     >
       {/* Week number cell — spans all rows in the week */}
       {isFirstOfWeek && (

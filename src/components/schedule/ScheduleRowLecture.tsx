@@ -22,12 +22,13 @@ export function ScheduleRowLecture({ item }: Props) {
     <div className="flex flex-col gap-0.5">
       <span className="text-xs" style={{ color: "var(--cs-muted)" }}>Lecture {item.lectureNum}</span>
       <span className="font-medium" style={{ color: "var(--cs-text)" }}>{item.lectureTitle}</span>
-      <div className="flex gap-2 mt-0.5">
+      {/* Wider gap and vertical padding below md give the links phone-sized tap targets. */}
+      <div className="flex gap-4 md:gap-2 mt-0.5">
         {item.lectureSlides && (
-          <ExternalLink href={item.lectureSlides} className="text-xs">Slides</ExternalLink>
+          <ExternalLink href={item.lectureSlides} className="text-xs py-1 md:py-0">Slides</ExternalLink>
         )}
         {item.lectureRecording && (
-          <ExternalLink href={item.lectureRecording} className="text-xs">Recording</ExternalLink>
+          <ExternalLink href={item.lectureRecording} className="text-xs py-1 md:py-0">Recording</ExternalLink>
         )}
       </div>
     </div>

@@ -13,12 +13,13 @@ export function ScheduleRowDiscussion({ item }: Props) {
         Discussion {item.discussionNum}
       </span>
       <span className="text-sm" style={{ color: "var(--cs-text)" }}>{item.discussionTitle}</span>
-      <div className="flex gap-2 mt-0.5">
+      {/* Wider gap and vertical padding below md give the links phone-sized tap targets. */}
+      <div className="flex gap-4 md:gap-2 mt-0.5">
         {item.discussionWorksheet && (
-          <ExternalLink href={item.discussionWorksheet} className="text-xs">Worksheet</ExternalLink>
+          <ExternalLink href={item.discussionWorksheet} className="text-xs py-1 md:py-0">Worksheet</ExternalLink>
         )}
         {item.discussionSolutions && (
-          <ExternalLink href={item.discussionSolutions} className="text-xs">Solutions</ExternalLink>
+          <ExternalLink href={item.discussionSolutions} className="text-xs py-1 md:py-0">Solutions</ExternalLink>
         )}
       </div>
     </div>

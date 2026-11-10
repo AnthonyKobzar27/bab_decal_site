@@ -28,7 +28,7 @@ export function ContactForm({ initialType }: Props) {
   }
 
   const inputClass =
-    "w-full rounded border border-[var(--cs-border)] bg-[var(--cs-surface)] px-3 py-2 text-sm text-[var(--cs-text)] outline-none focus:border-[var(--cs-link)] transition-colors";
+    "w-full rounded border border-[var(--cs-border)] bg-[var(--cs-surface)] px-3 py-2 text-base sm:text-sm text-[var(--cs-text)] outline-none focus:border-[var(--cs-link)] transition-colors";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
