@@ -42,7 +42,7 @@ export default function PoliciesPage() {
 
       <PolicySection id="lecture" title="Lecture">
         <p>
-          Lectures are held Thursdays 2:00–3:00 PM PT. Attendance is taken each week via the
+          Lectures are held Mondays 5:00–6:00 PM PT in Etcheverry 1171. Attendance is taken each week via the
           Attendance tab in the course header. Lecture recordings are posted to the{" "}
           <a href="https://www.youtube.com/@BlockchainatBerkeley" target="_blank" rel="noopener noreferrer">
             Blockchain at Berkeley YouTube channel

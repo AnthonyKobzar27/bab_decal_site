@@ -1,8 +1,8 @@
 export const SITE_TITLE = "Blockchain Dev Decal";
 export const COURSE_SUBTITLE = "Fall 2026 · UC Berkeley";
 export const INSTRUCTORS = ["Yadukrishna Ragu", "Anthony Kobzar", "Nithya Appannagaari"];
-export const LECTURE_TIME = "Mondays · Time TBD";
-export const LECTURE_ROOM = "TBD";
+export const LECTURE_TIME = "Mondays · 5–6 PM";
+export const LECTURE_ROOM = "Etcheverry 1171";
 export const COURSE_EMAIL = "blockchaindecal@berkeley.edu";
 
 // Attendance window — checked in America/Los_Angeles (Pacific Time)
