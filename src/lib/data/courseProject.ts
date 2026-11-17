@@ -16,10 +16,14 @@ export const courseProjectWeights: { item: string; weight: string }[] = [
   { item: "Final Demo & Writeup", weight: "10%" },
 ];
 
-/** Extra requirements added to Phase 4, rendered under the phase summary. */
-export const finalProjectRequirements: string[] = [
-  "The final project must include a meaningful improvement on top of what the team built in the earlier phases (new feature, better UX, security or gas improvements, etc.), not just the earlier deliverables resubmitted.",
-  "The writeup and presentation must give a strong rationale: why the team built this project, what problem it solves, and what value it provides to users.",
-  "In the final presentation, teams must live-demo connecting a wallet and completing a real transaction on testnet, and show it confirmed (e.g. on a block explorer).",
-  "The final submission must be deployable. Teams must submit a live deployed frontend URL (e.g. Vercel/Netlify) connected to their verified contract on testnet, with the contract address and block explorer link, and a README with steps to run and deploy it from scratch. Projects that only run locally don't meet the requirement.",
-];
+/**
+ * Phase 3.5 and Phase 4 blurbs.
+ * Keep each one a single paragraph at the same scale as Phases 1, 2, and 3
+ * on the course project page: one list item, no nested requirement bullets.
+ * The page prints COURSE_PROJECT_DUE in the phase title, so do not repeat it here.
+ */
+export const rustCompanionCliSummary =
+  "Build a small Rust CLI that grows on the Solidity project your team already deployed. You should be able to call that contract from the terminal on testnet. Submit your repository.";
+
+export const finalProjectSummary =
+  "Build a real improvement on Project 1 that incorporates Rust. Submit a short write-up of why you built it and what value it provides, a live demo connecting a wallet and making a real testnet transaction, and a live deployed site connected to your verified testnet contract, with the contract address, an explorer link, and a README on deploying from scratch.";
