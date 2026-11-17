@@ -96,31 +96,40 @@ export const schedule: ScheduleItem[] = [
     homeworkDue: "TBD (11:59 PM on Week 5's lecture day)",
   },
 
-  // Week 5
+  // Week 5 — HW5 assigned. No calendar due date is published (homework repo says TBD).
   {
     week: 5,
     date: DATE_TBD,
     day: "Mon",
     lectureNum: 5,
     lectureTitle: "Ethers.js",
+    homework: "HW5",
+    homeworkLink: hwFolderUrl("HW5 - Gas Optimization"),
+    homeworkDue: "TBD",
   },
 
-  // Week 6
+  // Week 6 — HW6 assigned. Due Monday, Nov 16, 2026, 11:59 PM PT.
   {
     week: 6,
     date: DATE_TBD,
     day: "Mon",
     lectureNum: 6,
     lectureTitle: "Rust Intro",
+    homework: "HW6",
+    homeworkLink: hwFolderUrl("HW6 - Rust Basics"),
+    homeworkDue: "Nov 16, 11:59 PM",
   },
 
-  // Week 7
+  // Week 7 — HW7 assigned. Due Friday, Dec 4, 2026, 11:59 PM PT.
   {
     week: 7,
     date: DATE_TBD,
     day: "Mon",
     lectureNum: 7,
     lectureTitle: "TBD",
+    homework: "HW7",
+    homeworkLink: hwFolderUrl("HW7 - COSMWASM"),
+    homeworkDue: "Dec 4, 11:59 PM",
   },
 
   // Week 8
